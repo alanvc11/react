@@ -1,7 +1,6 @@
 import styles from "./login.module.css"
 
 function Login (){
-
     return (
       <div className={styles.container}>
         <div className={styles.loginBox}>
