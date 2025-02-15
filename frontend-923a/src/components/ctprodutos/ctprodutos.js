@@ -45,7 +45,7 @@ function Produtos() {
             <div className={styles.card}>
               <img src="https://sindijoias.com.br/wp-content/uploads/2023/03/joias-img-1024x1024.png" alt="Imagem 1" />
               <p>ACESSÓRIO 1</p>
-              <h4>R$ 19,25</h4> <br />
+              <h4>R$ 29,25</h4> <br />
               <h6>ENVIO NACIONAL</h6>
             </div>
             <div className={styles.card}>
@@ -57,7 +57,7 @@ function Produtos() {
             <div className={styles.card}>
               <img src="https://blog.casadasaliancas.com.br/wp-content/uploads/2022/04/diferenca-de-joias-semijoias-e-bijuterias-2.jpg" alt="Imagem 3" />
               <p>ACESSÓRIO 3</p>
-              <h4>R$ 19,25</h4> <br />
+              <h4>R$ 47,25</h4> <br />
               <h6>ENVIO NACIONAL</h6>
             </div>
             <div className={styles.card}>
@@ -81,7 +81,7 @@ function Produtos() {
             <div className={styles.card}>
               <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcS0fl0SWia4bCEO9ugsQ_g8ryCWAM6pVFp_8Q&s" alt="Imagem 7" />
               <p>ACESSÓRIO 7</p>
-              <h4>R$ 19,25</h4> <br />
+              <h4>R$ 32,85</h4> <br />
               <h6>ENVIO NACIONAL</h6>
             </div>
             <div className={styles.card}>
@@ -93,7 +93,7 @@ function Produtos() {
             <div className={styles.card}>
               <img src="https://www.icebrojoias.com.br/cdn/shop/products/S59b0f7c69cf94eb9a1c51816b651ff38B_94038bec-6430-47b2-acf8-9084f65e3f3a.jpg?v=1653718733&width=2048" alt="Imagem 9" />
               <p>ACESSÓRIO 9</p>
-              <h4>R$ 19,25</h4> <br />
+              <h4>R$ 15,75</h4> <br />
               <h6>ENVIO NACIONAL</h6>
             </div>
             <div className={styles.card}>
