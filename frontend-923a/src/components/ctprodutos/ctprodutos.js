@@ -57,7 +57,7 @@ function Produtos() {
             <div className={styles.card}>
               <img src="https://blog.casadasaliancas.com.br/wp-content/uploads/2022/04/diferenca-de-joias-semijoias-e-bijuterias-2.jpg" alt="Imagem 3" />
               <p>ACESSÓRIO 3</p>
-              <h4>R$ 47,25</h4> <br />
+              <h4>R$ 47,90</h4> <br />
               <h6>ENVIO NACIONAL</h6>
             </div>
             <div className={styles.card}>
