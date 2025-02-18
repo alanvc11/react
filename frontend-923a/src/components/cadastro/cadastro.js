@@ -1,6 +1,7 @@
 import "bootstrap-icons/font/bootstrap-icons.css";
 import "@fortawesome/fontawesome-free/css/all.min.css";
 import styles from './cadastro.module.css'
+import { Link } from "react-router-dom";
 
 function Cadastro() {
 
@@ -10,7 +11,7 @@ function Cadastro() {
           <h2>Seja bem-vindo!</h2>
           <p>Acesse sua conta agora mesmo.</p>
           <a href="/login">
-            <button className={styles.loginBtn}>ENTRAR</button>
+            <button className={styles.loginBtn}><Link to='/' style={{textDecoration: 'none', color: 'white'}}>ENTRAR</Link></button>
           </a>
         </div>
   
