@@ -1,6 +1,7 @@
 import { useState } from "react";
 import styles from "./login.module.css";
 import api from '../../services/api';
+import { useNavigate } from "react-router-dom";
 
 // Componente de campo de entrada
 function InputField({ label, type, id, placeholder, iconClass, value, onChange }) { // Dados do input
@@ -35,6 +36,7 @@ function InputField({ label, type, id, placeholder, iconClass, value, onChange }
 function Login() {
   const [email, setEmail] = useState(""); // Armazeno o email
   const [password, setPassword] = useState(""); // Armazeno a senha
+  const navigate = useNavigate();
 
 // Função para lidar com o envio do formulário
   const handleSubmit = async (e) => {
@@ -44,6 +46,7 @@ function Login() {
       const response = await api.post("/auth", { email, password }); // Envio o email e senha para a rota de autenticação
 
       console.log(response.data);
+      navigate("/Inicial");
 
       setEmail("");
       setPassword("");

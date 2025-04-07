@@ -4,6 +4,8 @@ import { faSearch, faPhone, faEnvelope } from '@fortawesome/free-solid-svg-icons
 import { faCcVisa, faCcMastercard } from '@fortawesome/free-brands-svg-icons';
 import { faFacebookF, faWhatsapp, faInstagram } from '@fortawesome/free-brands-svg-icons';
 import styles from './inicial.module.css';
+import { Link } from 'react-router-dom';
+
 
 const Header = () => (
   <header className={styles.header}>
@@ -17,7 +19,7 @@ const Header = () => (
       </button>
     </div>
     <div className={styles.headerIcons}>
-      <a href="/cadastrar"><i className="bi bi-person"></i></a>
+      <a href="/Cadastro"><i className="bi bi-person"></i></a>
       <i className="bi bi-cart"></i>
       <i className="bi bi-heart"></i>
       <i className="bi bi-headset"></i>
