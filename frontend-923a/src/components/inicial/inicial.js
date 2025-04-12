@@ -147,7 +147,6 @@ const ProductGrid = () => (
   <section className={styles.promotionMain}>
     <div className={styles.productGrid}>
       {/* Cards de produtos */}
-      {/* Você pode continuar com os mesmos cards que já estavam */}
     </div>
   </section>
 );
