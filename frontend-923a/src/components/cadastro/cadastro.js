@@ -1,7 +1,7 @@
 import "bootstrap-icons/font/bootstrap-icons.css";
 import "@fortawesome/fontawesome-free/css/all.min.css";
 import styles from './cadastro.module.css'
-import { Link } from "react-router-dom";
+import { Link, useNavigate } from "react-router-dom";
 import {useState} from 'react';
 import api from '../../services/api';
 
@@ -11,6 +11,7 @@ function Cadastro() {
   const [email, setEmail] = useState(""); //armazena o email
   const [password, setPassword] = useState(""); //armazena a senha
   const [confirmPassword, setConfirmPassword] = useState("");
+  const navigate = useNavigate();
 
 
   const handleCadastro = async (e) =>{
@@ -24,6 +25,7 @@ function Cadastro() {
     try{
       const envio = await api.post("/user", { name, email, password, confirm_password: confirmPassword, user_type: "comprador"});
       console.log(envio.data)
+      navigate("/Login");
 
       setName("");
       setEmail("");

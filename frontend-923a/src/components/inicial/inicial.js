@@ -1,16 +1,14 @@
 import React from 'react';
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
 import { faSearch, faPhone, faEnvelope } from '@fortawesome/free-solid-svg-icons';
-import { faCcVisa, faCcMastercard } from '@fortawesome/free-brands-svg-icons';
-import { faFacebookF, faWhatsapp, faInstagram } from '@fortawesome/free-brands-svg-icons';
+import { faCcVisa, faCcMastercard, faFacebookF, faWhatsapp, faInstagram } from '@fortawesome/free-brands-svg-icons';
 import styles from './inicial.module.css';
-import { Link } from 'react-router-dom';
-
+import Carousel from 'react-bootstrap/Carousel';
 
 const Header = () => (
   <header className={styles.header}>
     <div className={styles.logo}>
-      <h1>BAZAARLY</h1>
+    <img src="/logoB.png" alt="Minha Imagem" className={styles.logoB} />
     </div>
     <div className={styles.searchBar}>
       <input className={styles.searchInput} type="text" placeholder="Buscar produtos" />
@@ -19,11 +17,12 @@ const Header = () => (
       </button>
     </div>
     <div className={styles.headerIcons}>
-      <a href="/Cadastro"><i className="bi bi-person"></i></a>
-      <i className="bi bi-cart"></i>
+      <i className="bi bi-bag"></i>
       <i className="bi bi-heart"></i>
-      <i className="bi bi-headset"></i>
-      <i className="bi bi-globe"></i>
+      <a href="/Cadastro" className={styles.loginLink}>
+        <i className="bi bi-person"></i>
+        <span className={styles.loginText}>Entrar</span>
+      </a>
     </div>
   </header>
 );
@@ -47,58 +46,108 @@ const Navbar = () => (
 
 const PromotionBanner = () => (
   <section className={styles.promotionBanner}>
-    <h2>Descubra as mais recentes tendências de pequenas lojas!</h2>
-    <div className={styles.highlightedCategories}>
-      <div className={styles.categoryCard}>
-        <img className={styles.categoryImage} src="https://lh4.googleusercontent.com/proxy/ifXWh5ZfowQ-KY6MbrIE6NJ8F40VTHPokVfacQFrmgkvK5cFtPmU7hxem3kY2KvfEciOdmzwbek_arAIppYHrCn2gAsY26R9ZnQuuNkVDmQJ8UDeLrGI3kkCU-dcMT48AA" alt="Produtos de casa" />
-        <p className={styles.categoryText}>Produtos de casa com alto requinte</p>
-      </div>
-      <div className={styles.categoryCard}>
-        <img className={styles.categoryImage} src="https://conteudo.solutudo.com.br/wp-content/uploads/2019/10/LORIS2.jpg" alt="Joias" />
-        <p className={styles.categoryText}>Joias em bons estados</p>
-      </div>
-      <div className={styles.categoryCard}>
-        <img className={styles.categoryImage} src="https://cantinhodosonho.com.br/cdn/shop/files/Sfe12187b958c40358625faedabebd8b6U_800x.webp?v=1717101659" alt="Roupas de bebê" />
-        <p className={styles.categoryText}>Roupas de bebê em 10x</p>
-      </div>
-      <div className={styles.categoryCard}>
-        <img className={styles.categoryImage} src="https://down-br.img.susercontent.com/file/sg-11134201-22120-bb1r7gdrsmkvaf" alt="30% em conjuntos" />
-        <p className={styles.categoryText}>30% em conjuntos</p>
-      </div>
+    <Carousel>
+      <Carousel.Item interval={3400}>
+        <img
+          className={styles.carouselImage}
+          src="https://thumb.braavo.me/cleme/0/3137170116.png"
+          alt="Slide 1"
+        />
+        <Carousel.Caption>
+          {/* texto no carrocel */}
+        </Carousel.Caption>
+      </Carousel.Item>
+      <Carousel.Item interval={3400}>
+        <img
+          className={styles.carouselImage}
+          src="https://content.app-us1.com/wbbm6Q/2025/02/06/c8f8ec99-a609-471d-b317-d3ec9fafe726.jpeg"
+          alt="Slide 2"
+        />
+        <Carousel.Caption>
+          {/* texto no carrocel */}
+        </Carousel.Caption>
+      </Carousel.Item>
+      <Carousel.Item interval={3400}>
+        <img
+          className={styles.carouselImage}
+          src="https://usegull.com/cdn/shop/collections/Banner_Promocional_Mobile.png?v=1736444073&width=2048"
+          alt="Slide 3"
+        />
+        <Carousel.Caption>
+          {/* texto no carrocel */}
+        </Carousel.Caption>
+      </Carousel.Item>
+    </Carousel>
+  </section>
+);
+
+const HighlightedCategories = () => (
+  <section className={styles.highlightedCategories}>
+    <div className={styles.categoryCard}>
+      <img
+        src="https://http2.mlstatic.com/D_NQ_NP_821198-MLB49995542698_052022-O.webp"
+        alt="Botas"
+        className={styles.categoryImage}
+      />
+      <p className={styles.categoryText}>Botas</p>
+    </div>
+    <div className={styles.categoryCard}>
+      <img
+        src="https://cdn.awsli.com.br/600x450/2593/2593830/produto/214368735/dsc_4478-7f891pnvcq.jpg"
+        alt="Tênis"
+        className={styles.categoryImage}
+      />
+      <p className={styles.categoryText}>Tênis</p>
+    </div>
+    <div className={styles.categoryCard}>
+      <img
+        src="https://acdn-us.mitiendanube.com/stores/002/822/533/products/1_preta-0755e2520fcde918b516780560897023-1024-1024.jpg"
+        alt="Jaquetas"
+        className={styles.categoryImage}
+      />
+      <p className={styles.categoryText}>Jaquetas</p>
+    </div>
+    <div className={styles.categoryCard}>
+      <img
+        src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcSI086HJ2dSuGnj6HTk_nUHBbAn8oY_VT10PQ&s"
+        alt="Jeans"
+        className={styles.categoryImage}
+      />
+      <p className={styles.categoryText}>Jeans</p>
+    </div>
+    <div className={styles.categoryCard}>
+      <img
+        src="https://static.netshoes.com.br/produtos/kit-2-moletons-moletom-blusa-de-frio-unissex-algodao/28/5ZV-1204-028/5ZV-1204-028_zoom1.jpg?ts=1683299822&ims=544x"
+        alt="Moletons"
+        className={styles.categoryImage}
+      />
+      <p className={styles.categoryText}>Moletons</p>
+    </div>
+    <div className={styles.categoryCard}>
+      <img
+        src="https://acdn-us.mitiendanube.com/stores/002/515/645/products/f930b0d47eb387a1b254a649b93447d5-918cdeb75231be23f117253139122596-640-0.png"
+        alt="Perfumes"
+        className={styles.categoryImage}
+      />
+      <p className={styles.categoryText}>Perfumes</p>
+    </div>
+    <div className={styles.categoryCard}>
+      <img
+        src="https://lojabluk.vteximg.com.br/arquivos/ids/174942-800-1000/vestido-longo-linho-com-faixa-para-amarracao-natural-vt32800224-01.jpg?v=638603012730800000"
+        alt="Vestidos"
+        className={styles.categoryImage}
+      />
+      <p className={styles.categoryText}>Vestidos</p>
     </div>
   </section>
 );
 
+
 const ProductGrid = () => (
   <section className={styles.promotionMain}>
-    <div className={styles.promoContent}>
-      <img className={styles.promoImage} src="https://marketplace.canva.com/EAE9DQj6Sb8/2/0/1131w/canva-pre%C3%A7o-%C3%BAnico-cartaz-wgFISba_1MU.jpg" alt="Promoção" />
-    </div>
     <div className={styles.productGrid}>
-      <div className={styles.productCard}>
-        <img className={styles.productImage} src="https://cdn.awsli.com.br/2500x2500/755/755242/produto/244733570/sandalia-flatform-off-white-com-tiras-brilhantes-1-rca3mwa79a.jpg" alt="Sandália" />
-        <p className={styles.productText}>SANDÁLIA FEMININA TAMANHO FLAT FIVELA</p>
-        <p className={styles.productPrice}><strong>R$ 15,90</strong></p>
-        <span className={styles.discount}>10x sem juros</span>
-      </div>
-      <div className={styles.productCard}>
-        <img className={styles.productImage} src="https://m.media-amazon.com/images/I/61WXXeDFcnL.jpg" alt="Câmera" />
-        <p className={styles.productText}>CÂMERA INSTANTÂNEA INSTAX MINI 7</p>
-        <p className={styles.productPrice}><strong>R$ 50,00</strong></p>
-        <span className={styles.discount}>10x sem juros</span>
-      </div>
-      <div className={styles.productCard}>
-        <img className={styles.productImage} src="https://d1taioma509ygp.cloudfront.net/Custom/Content/Products/13/20/132083_calca-feminina-fallen-tactel-cargo-ripstop-verde_m1_638221847579772368.jpg" alt="Calça" />
-        <p className={styles.productText}>CALÇA FEMININA ESTAMPADA</p>
-        <p className={styles.productPrice}><strong>R$ 31,90</strong></p>
-        <span className={styles.discount}>Frete Grátis</span>
-      </div>
-      <div className={styles.productCard}>
-        <img className={styles.productImage} src="https://shoppingcity.com.br/media/catalog/product/cache/51a80c9da94f85ac42b65ba251e9fd91/c/a/camisa_feminina_branca_manga_longa.jpg" alt="Camisa" />
-        <p className={styles.productText}>CAMISA DE MANGA COMPRIDA ESTAMPADA</p>
-        <p className={styles.productPrice}><strong>R$ 21,30</strong></p>
-        <span className={styles.discount}>Frete Grátis</span>
-      </div>
+      {/* Cards de produtos */}
+      {/* Você pode continuar com os mesmos cards que já estavam */}
     </div>
   </section>
 );
@@ -141,9 +190,11 @@ const Inicial = () => (
     <Header />
     <Navbar />
     <PromotionBanner />
+    <HighlightedCategories /> {/* Adicionado aqui */}
     <ProductGrid />
     <Footer />
   </div>
 );
+
 
 export default Inicial;

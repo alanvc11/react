@@ -1,4 +1,5 @@
 import { BrowserRouter, Route, Routes } from 'react-router-dom'
+import 'bootstrap/dist/css/bootstrap.min.css';
 
 import Login from "./components/login/login";
 import Cadastro from "./components/cadastro/cadastro";
@@ -12,9 +13,9 @@ function App() {
   return (
     <BrowserRouter>
     <Routes>
-      <Route path='/Inicial' element={<Inicial/>} />
+      <Route path='/' element={<Inicial/>} />
       <Route path='/Login' element={<Login/>} />
-      <Route path='/' element={<Cadastro/>} />  
+      <Route path='/Cadastro' element={<Cadastro/>} />  
       <Route path='/Carrinho' element={<Carrinho/>} />
       <Route path='/Pagamento' element={<Pagamento/>} />
       <Route path='/Naoencontrado' element={<Naoencontrado/>} />

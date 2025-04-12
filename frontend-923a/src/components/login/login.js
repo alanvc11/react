@@ -36,6 +36,7 @@ function InputField({ label, type, id, placeholder, iconClass, value, onChange }
 function Login() {
   const [email, setEmail] = useState(""); // Armazeno o email
   const [password, setPassword] = useState(""); // Armazeno a senha
+  const [errorMessage, setErrorMessage] = useState(""); // Estado para a mensagem de erro
   const navigate = useNavigate();
 
 // Função para lidar com o envio do formulário
@@ -46,12 +47,14 @@ function Login() {
       const response = await api.post("/auth", { email, password }); // Envio o email e senha para a rota de autenticação
 
       console.log(response.data);
-      navigate("/Inicial");
+      navigate("/");
 
       setEmail("");
       setPassword("");
+      setErrorMessage(""); // Limpa a mensagem de erro em caso de sucesso
     } catch (error) {
       console.error("Erro no login:", error);
+      setErrorMessage("Email ou senha inválidos"); // Define a mensagem de erro
     }
   };
 
@@ -80,6 +83,7 @@ function Login() {
             value={password}
             onChange={(e) => setPassword(e.target.value)} // Armazena a senha digitada
           />
+          {errorMessage && <p style={{ color: 'red' }}>{errorMessage}</p>} {/* Exibe a mensagem de erro */}
           <a href="#" className={styles.forgotPassword}>
             Esqueceu sua senha? Recupere
           </a>
