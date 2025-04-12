@@ -189,11 +189,10 @@ const Inicial = () => (
     <Header />
     <Navbar />
     <PromotionBanner />
-    <HighlightedCategories /> {/* Adicionado aqui */}
+    <HighlightedCategories /> 
     <ProductGrid />
     <Footer />
   </div>
 );
-
 
 export default Inicial;
