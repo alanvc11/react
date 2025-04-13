@@ -1,14 +1,20 @@
 import React from 'react';
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
-import { faSearch, faPhone, faEnvelope } from '@fortawesome/free-solid-svg-icons';
-import { faCcVisa, faCcMastercard, faFacebookF, faWhatsapp, faInstagram } from '@fortawesome/free-brands-svg-icons';
+import {
+  faSearch,
+  faPhone,
+  faEnvelope,
+  faCreditCard,
+  faStar as faStarSolid,
+  faStarHalfAlt as faStarHalfSolid,
+} from '@fortawesome/free-solid-svg-icons';
 import styles from './inicial.module.css';
 import Carousel from 'react-bootstrap/Carousel';
 
 const Header = () => (
   <header className={styles.header}>
     <div className={styles.logo}>
-    <img src="/logoB.png" alt="Minha Imagem" className={styles.logoB} />
+      <img src="/logoB.png" alt="Minha Imagem" className={styles.logoB} />
     </div>
     <div className={styles.searchBar}>
       <input className={styles.searchInput} type="text" placeholder="Buscar produtos" />
@@ -142,11 +148,99 @@ const HighlightedCategories = () => (
   </section>
 );
 
-
 const ProductGrid = () => (
-  <section className={styles.promotionMain}>
+  <section className={styles.productGridSection}>
     <div className={styles.productGrid}>
-      {/* Cards de produtos */}
+      <div className={styles.productCard}>
+        <img
+          src="https://images.tcdn.com.br/img/img_prod/836395/camisa_polo_masculina_malha_piquet_vida_marinha_manga_curta_3649_1_e87d9e65d0988e2e2125ff6e7117a5eb.jpg"
+          alt="Camisa Polo Piquet Masculina Preta"
+          className={styles.productImage}
+        />
+        <p className={styles.productText}>Camisa Polo Piquet Masculina Preta</p>
+        <p className={styles.productPrice}>R$48,90</p>
+        <p className={styles.discount}>ou 3x de R$17,16</p>
+        <p className={styles.rating}>
+          <FontAwesomeIcon icon={faStarSolid} className={styles.starIcon} />
+          <FontAwesomeIcon icon={faStarSolid} className={styles.starIcon} />
+          <FontAwesomeIcon icon={faStarSolid} className={styles.starIcon} />
+          <FontAwesomeIcon icon={faStarSolid} className={styles.starIcon} />
+          <FontAwesomeIcon icon={faStarHalfSolid} className={styles.starIcon} />
+          (189)
+        </p>
+      </div>
+      <div className={styles.productCard}>
+        <img
+          src="https://anarhu.cdn.magazord.com.br/img/2023/08/produto/4405/camisa-polo-azul-marinho-anarhu.jpg"
+          alt="Camisa Polo Piquet Masculina Azul Marinho"
+          className={styles.productImage}
+        />
+        <p className={styles.productText}>Camisa Polo Piquet Masculina Azul Marinho</p>
+        <p className={styles.productPrice}>R$48,90</p>
+        <p className={styles.discount}>ou 3x de R$17,16</p>
+        <p className={styles.rating}>
+          <FontAwesomeIcon icon={faStarSolid} className={styles.starIcon} />
+          <FontAwesomeIcon icon={faStarSolid} className={styles.starIcon} />
+          <FontAwesomeIcon icon={faStarSolid} className={styles.starIcon} />
+          <FontAwesomeIcon icon={faStarSolid} className={styles.starIcon} />
+          <FontAwesomeIcon icon={faStarHalfSolid} className={styles.starIcon} />
+          (115)
+        </p>
+      </div>
+      <div className={styles.productCard}>
+        <img
+          src="https://cdn.awsli.com.br/2500x2500/1986/1986667/produto/186796907e8028a8b6d.jpg"
+          alt="Camisa Polo Piquet Feminina Preta"
+          className={styles.productImage}
+        />
+        <p className={styles.productText}>Camisa Polo Piquet Feminina Preta</p>
+        <p className={styles.productPrice}>R$44,91</p>
+        <p className={styles.discount}>ou 3x de R$15,76</p>
+        <p className={styles.rating}>
+          <FontAwesomeIcon icon={faStarSolid} className={styles.starIcon} />
+          <FontAwesomeIcon icon={faStarSolid} className={styles.starIcon} />
+          <FontAwesomeIcon icon={faStarSolid} className={styles.starIcon} />
+          <FontAwesomeIcon icon={faStarSolid} className={styles.starIcon} />
+          <FontAwesomeIcon icon={faStarHalfSolid} className={styles.starIcon} />
+          (51)
+        </p>
+      </div>
+      <div className={styles.productCard}>
+        <img
+          src="https://haag.cdn.magazord.com.br/img/2024/04/produto/378/camiseta-algodao-egipcio-haag-preta-1.jpg"
+          alt="Camiseta de Algodão Premium Preta"
+          className={styles.productImage}
+        />
+        <p className={styles.productText}>Camiseta de Algodão Premium Preta</p>
+        <p className={styles.productPrice}>R$35,90</p>
+        <p className={styles.discount}>ou 3x de R$12,60</p>
+        <p className={styles.rating}>
+          <FontAwesomeIcon icon={faStarSolid} className={styles.starIcon} />
+          <FontAwesomeIcon icon={faStarSolid} className={styles.starIcon} />
+          <FontAwesomeIcon icon={faStarSolid} className={styles.starIcon} />
+          <FontAwesomeIcon icon={faStarSolid} className={styles.starIcon} />
+          <FontAwesomeIcon icon={faStarHalfSolid} className={styles.starIcon} />
+          (243)
+        </p>
+      </div>
+      <div className={styles.productCard}>
+        <img
+          src="https://cdn.awsli.com.br/2500x2500/1226/1226626/produto/65835502/987231fac2.jpg"
+          alt="Camiseta P.V. Malha Fria Preta"
+          className={styles.productImage}
+        />
+        <p className={styles.productText}>Camiseta P.V. Malha Fria Preta</p>
+        <p className={styles.productPrice}>R$27,90</p>
+        <p className={styles.discount}>ou 3x de R$9,79</p>
+        <p className={styles.rating}>
+          <FontAwesomeIcon icon={faStarSolid} className={styles.starIcon} />
+          <FontAwesomeIcon icon={faStarSolid} className={styles.starIcon} />
+          <FontAwesomeIcon icon={faStarSolid} className={styles.starIcon} />
+          <FontAwesomeIcon icon={faStarSolid} className={styles.starIcon} />
+          <FontAwesomeIcon icon={faStarHalfSolid} className={styles.starIcon} />
+          (109)
+        </p>
+      </div>
     </div>
   </section>
 );
@@ -160,8 +254,8 @@ const Footer = () => (
         <li className={styles.footerItem}>Dúvidas frequentes</li>
         <li className={styles.footerItem}>Trocas e devoluções</li>
       </ul>
-      <FontAwesomeIcon icon={faCcVisa} className={styles.paymentIcon} />
-      <FontAwesomeIcon icon={faCcMastercard} className={styles.paymentIcon} />
+      <FontAwesomeIcon icon={faCreditCard} className={styles.paymentIcon} />
+      <FontAwesomeIcon icon={faCreditCard} className={styles.paymentIcon} />
     </div>
     <div className={styles.footerSection}>
       <h3>INSTITUCIONAL</h3>
@@ -173,12 +267,22 @@ const Footer = () => (
     </div>
     <div className={styles.footerSection}>
       <h3>FALE CONOSCO</h3>
-      <p><FontAwesomeIcon icon={faPhone} /> (82) 91234-5678</p>
-      <p><FontAwesomeIcon icon={faEnvelope} /> bazaarly@loja.com.br</p>
+      <p>
+        <FontAwesomeIcon icon={faPhone} /> (82) 91234-5678
+      </p>
+      <p>
+        <FontAwesomeIcon icon={faEnvelope} /> bazaarly@loja.com.br
+      </p>
       <div className={styles.socialIcons}>
-        <a href="#" className={styles.socialIcon}><FontAwesomeIcon icon={faFacebookF} /></a>
-        <a href="#" className={styles.socialIcon}><FontAwesomeIcon icon={faWhatsapp} /></a>
-        <a href="#" className={styles.socialIcon}><FontAwesomeIcon icon={faInstagram} /></a>
+        <a href="#" className={styles.socialIcon}>
+          <i className="fab fa-facebook-f"></i>
+        </a>
+        <a href="#" className={styles.socialIcon}>
+          <i className="fab fa-whatsapp"></i>
+        </a>
+        <a href="#" className={styles.socialIcon}>
+          <i className="fab fa-instagram"></i>
+        </a>
       </div>
     </div>
   </footer>
@@ -189,7 +293,7 @@ const Inicial = () => (
     <Header />
     <Navbar />
     <PromotionBanner />
-    <HighlightedCategories /> 
+    <HighlightedCategories />
     <ProductGrid />
     <Footer />
   </div>
