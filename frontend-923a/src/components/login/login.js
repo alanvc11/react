@@ -47,7 +47,7 @@ function Login() {
       const response = await api.post("/auth", { email, password }); // Envio o email e senha para a rota de autenticação
 
       console.log(response.data);
-      navigate("/");
+      navigate("/Home");
 
       setEmail("");
       setPassword("");
