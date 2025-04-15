@@ -1,5 +1,6 @@
 import React from 'react';
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
+import { Link } from 'react-router-dom';
 import {
   faSearch,
   faPhone,
@@ -168,6 +169,9 @@ const ProductGrid = () => (
           <FontAwesomeIcon icon={faStarHalfSolid} className={styles.starIcon} />
           (189)
         </p>
+        <Link to='/Cadastro'>
+           <button><i class="bi bi-cart-plus"></i></button>
+        </Link>
       </div>
       <div className={styles.productCard}>
         <img
@@ -186,6 +190,9 @@ const ProductGrid = () => (
           <FontAwesomeIcon icon={faStarHalfSolid} className={styles.starIcon} />
           (115)
         </p>
+        <Link to='/Cadastro'>
+           <button><i class="bi bi-cart-plus"></i></button>
+        </Link>
       </div>
       <div className={styles.productCard}>
         <img
@@ -204,6 +211,9 @@ const ProductGrid = () => (
           <FontAwesomeIcon icon={faStarHalfSolid} className={styles.starIcon} />
           (51)
         </p>
+        <Link to='/Cadastro'>
+           <button><i class="bi bi-cart-plus"></i></button>
+        </Link>
       </div>
       <div className={styles.productCard}>
         <img
@@ -222,6 +232,9 @@ const ProductGrid = () => (
           <FontAwesomeIcon icon={faStarHalfSolid} className={styles.starIcon} />
           (243)
         </p>
+        <Link to='/Cadastro'>
+           <button><i class="bi bi-cart-plus"></i></button>
+        </Link>
       </div>
       <div className={styles.productCard}>
         <img
@@ -240,6 +253,9 @@ const ProductGrid = () => (
           <FontAwesomeIcon icon={faStarHalfSolid} className={styles.starIcon} />
           (109)
         </p>
+        <Link to='/Cadastro'>
+           <button><i class="bi bi-cart-plus"></i></button>
+        </Link>
       </div>
     </div>
   </section>

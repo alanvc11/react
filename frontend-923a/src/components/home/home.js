@@ -9,6 +9,7 @@ import {
   faStarHalfAlt as faStarHalfSolid,
 } from '@fortawesome/free-solid-svg-icons';
 import { faCcVisa, faCcMastercard, faFacebookF, faWhatsapp, faInstagram } from '@fortawesome/free-brands-svg-icons';
+import { Link } from 'react-router-dom';
 import styles from './home.module.css';
 import Carousel from 'react-bootstrap/Carousel';
 import api from '../../services/api';
@@ -44,7 +45,9 @@ const Header = () => {
           </button>
         </div>
         <div className={styles.headerIcons}>
-          <i className="bi bi-bag"></i>
+          <Link to='/Carrinho'> 
+            <i className="bi bi-bag"></i>
+          </Link>
           <i className="bi bi-heart"></i>
           <a href="/Atualizar" className={styles.loginLink}>
           <i className="bi bi-person"></i>
@@ -195,6 +198,9 @@ const ProductGrid = () => (
           <FontAwesomeIcon icon={faStarHalfSolid} className={styles.starIcon} />
           (189)
         </p>
+        <Link to='/Carrinho'>
+          <button><i class="bi bi-cart-plus"></i></button>
+        </Link>
       </div>
       <div className={styles.productCard}>
         <img
@@ -213,6 +219,9 @@ const ProductGrid = () => (
           <FontAwesomeIcon icon={faStarHalfSolid} className={styles.starIcon} />
           (115)
         </p>
+        <Link to='/Carrinho'>
+           <button><i class="bi bi-cart-plus"></i></button>
+        </Link>
       </div>
       <div className={styles.productCard}>
         <img
@@ -231,6 +240,9 @@ const ProductGrid = () => (
           <FontAwesomeIcon icon={faStarHalfSolid} className={styles.starIcon} />
           (51)
         </p>
+        <Link to='/Carrinho'>
+           <button><i class="bi bi-cart-plus"></i></button>
+        </Link>
       </div>
       <div className={styles.productCard}>
         <img
@@ -249,6 +261,9 @@ const ProductGrid = () => (
           <FontAwesomeIcon icon={faStarHalfSolid} className={styles.starIcon} />
           (243)
         </p>
+        <Link to='/Carrinho'>
+           <button><i class="bi bi-cart-plus"></i></button>
+        </Link>
       </div>
       <div className={styles.productCard}>
         <img
@@ -267,6 +282,9 @@ const ProductGrid = () => (
           <FontAwesomeIcon icon={faStarHalfSolid} className={styles.starIcon} />
           (109)
         </p>
+        <Link to='/Carrinho'>
+           <button><i class="bi bi-cart-plus"></i></button>
+        </Link>
       </div>
     </div>
   </section>

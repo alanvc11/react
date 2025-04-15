@@ -89,6 +89,7 @@ h2 {
 .navItem {
   color: #FFFFFF;
   font-size: 14px;
+  cursor: pointer;
 }
 
 .promotionBanner {
@@ -114,6 +115,7 @@ h2 {
 .categoryCard {
   text-align: center;
   width: 150px;
+  cursor: pointer;
 }
 
 .categoryImage {
@@ -158,7 +160,7 @@ h2 {
 }
 
 .productImage {
-  width: 100%;
+  width: 70%;
   height: 200px; /* Tamanho fixo para a imagem */
   border-radius: 10px;
   margin-bottom: 10px;

@@ -40,55 +40,44 @@ header .searchBar input {
     width: 200px; /* Ajuste a largura conforme necessário */
 }
 
-header .searchBar input:focus {
-    border-bottom: 2px solid #007bff; /* Cor da linha embaixo ao focar */
-}
 
-.searchBar button {
-    background-color: transparent; /* Fundo transparente */
-    border: none; /* Remove borda */
-    cursor: pointer; /* Muda o cursor ao passar por cima */
-}
 
-.searchBar button i {
-    font-size: 24px; /* Tamanho do ícone */
-    color: #000; /* Cor do ícone */
-    transition: color 0.3s; /* Transição suave para mudança de cor */
-}
+.searchButton {
+    border: none;
+    cursor: pointer;
+  }
 
-.searchBar button:hover i {
-    color: #007bff; /* Cor ao passar o mouse */
-}
-
-.headerIcons i {
-    font-size: 24px; /* Ajuste o tamanho do ícone conforme necessário */
-    margin-left: 15px; /* Espaçamento entre os ícones */
-    color: #000; /* Altere a cor se desejar */
-    cursor: pointer; /* Muda o cursor ao passar por cima */
-    transition: color 0.3s; /* Adiciona uma transição suave na cor */
-}
-
-.headerIcons i:hover {
-    color: #007bff; /* Cor ao passar o mouse */
-}
-
-nav {
-    background-color: #4A144C;
-    padding: 10px 20px;
-    width: 100%;
-    max-width: 100vw; /* Garante que o nav não ultrapasse a largura da tela */
-}
-
-nav ul {
+  .headerIcons {
     display: flex;
-    justify-content: space-around;
-    list-style: none;
-}
+    align-items: center;
+    gap: 15px;
+  }
+  
+  .headerIcons i {
+    font-size: 24px;
+    margin-left: 15px;
+    color: #4A144C;
+    cursor: pointer;
+    transition: color 0.3s;
+  }
+  
+  .headerIcons i:hover {
+    color: #007bff;
+  }
 
-nav ul li {
-    color: #FFFFFF;
-    font-size: 14px;
-}
+    .userName {
+    margin-left: 8px;
+    font-weight: 500;
+    color: #000;
+  }
+
+.searchButton {
+    background-color: transparent;
+    font-size: 24px;
+    color: #000;
+    transition: color 0.3s;
+  }
+
 
 /* Estilos da seção de resultados */
 .searchResults {
@@ -187,9 +176,7 @@ footer img {
     transition: color 0.3s;
 }
 
-.socialIcons a:hover {
-    color: #CCC; /* Cor quando o usuário passa o mouse por cima */
-}
+
 
 .card {
     display: flex;
@@ -302,23 +289,9 @@ h2 {
     color: #4E2765;
 }
 
-.adicionarCarrinho {
-    border-radius: 10px;
-    margin: 20px 5px;
-    background-color: #6A1B9A; /* Cor para diferenciar do botão de finalizar */
-    width: 310px;
-    padding: 12px 20px; /* Espaçamento interno */
-    color: white; /* Texto branco */
-    font-size: 20px; /* Tamanho do texto */
-    font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
-    border: none; /* Remove bordas */
-    cursor: pointer; /* Muda o cursor ao passar o mouse */
-    transition: background-color 0.3s ease; /* Transição suave */
-    display: block; /* Ocupa o espaço total horizontal */
-    margin-left: auto;
-    margin-right: auto;
-}
-
-.adicionarCarrinho:hover {
-    background-color: #8E24AA; /* Cor ao passar o mouse */
-}
+.logoB {
+    width: 60px;
+    height: auto;
+    object-fit: contain;
+    display: block;
+  }
